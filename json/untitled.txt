@@ -1,0 +1,48 @@
+/*
+ Example 1:
+
+
+//  /game/getSettings route in oregonTrail.js. (create on board with class)
+
+app.get('/game/getSettings', function(req, res) {
+  
+  // return as json
+  res.setHeader('Content-Type', 'application/json');
+  res.send(game.gameSettings);
+
+})
+
+// remembering that game.gameSettings is: 
+exports.gameSettings = new gameData();
+function gameData() {
+        this.playerNames = [];
+        this.playerProfession = "";
+        this.playerMoney = 0;
+        this.startMonth = "";
+}
+
+// show how this class (gameData) matches up to the returned json given by the api:
+{"playerNames":[],"playerProfession":"","playerMoney":0,"startMonth":""}
+
+
+
+/*
+ Example 2:
+
+
+function showSettings() {
+    fetch('http://localhost:1337/game/getSettings').then(function(response) {
+        if (response.status !== 200) {
+            console.log('problem with ajax call! ' + response.status + " msg: " + response.value);
+            return;
+        }
+        response.json().then(function(data) {  
+            populateSettings(data);
+            //return data;  
+			//alert(data);
+        });
+    });
+}
+
+showSettings();
+*/
