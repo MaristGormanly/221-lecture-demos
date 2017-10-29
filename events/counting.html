@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body>
+		<p>Enter your comments below (100 characters max)</p>
+		Comments<br/>
+		<textarea id='comments'></textarea>
+		Character Count:<br />
+		<input id='count' value='0' />
+	</body>
+	
+	<script>
+
+		comments.addEventListener('keyup', function(e) {
+		    var count = document.getElementById('comments').value.length;
+		    document.getElementById('count').value = count;    
+		    if (count > 100) {
+		        comments.value = comments.value.slice(0,100);
+		    }
+		});
+	
+	</script>
+	
+	
+</html>
+
