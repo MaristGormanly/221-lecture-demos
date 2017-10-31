@@ -1,3 +1,8 @@
+function myFunction() {
+    // call your back end api here
+}
+myFunction();
+
 
 /*
 function populateSettings(settings) {
@@ -11,6 +16,7 @@ function populateSettings(settings) {
 	document.getElementById('rMonth').innerHTML = settings.startMonth;
 }
 */
+
 
 
 
