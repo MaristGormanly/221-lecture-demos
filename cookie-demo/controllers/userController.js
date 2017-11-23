@@ -8,10 +8,10 @@ function user(id, first, last, email, password) {
 
 var users = [];
 
-var user1 = new user(1, "Brian", "Gormanly", "brian.gormanly@marist.edu", "letmein");
-var user2 = new user(2, "Happy", "Gilmore", "happy.gilmore@gmail.com", "backnine");
-var user3 = new user(3, "Harry", "Truman", "htruman@wh.gov", "pres1");
-var user4 = new user(4, "George", "Washinton", "gw@wh.gov", "pres2");
+var user1 = new user(0, "Brian", "Gormanly", "brian.gormanly@marist.edu", "letmein");
+var user2 = new user(1, "Happy", "Gilmore", "happy.gilmore@gmail.com", "backnine");
+var user3 = new user(2, "Harry", "Truman", "htruman@wh.gov", "pres1");
+var user4 = new user(3, "George", "Washinton", "gw@wh.gov", "pres2");
 users.push(user1);
 users.push(user2);
 users.push(user3);
