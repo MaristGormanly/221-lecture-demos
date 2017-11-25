@@ -20,8 +20,8 @@ function logIn(userId) {
 	var now = new Date();
 	var EXPIRE_TIME = 10000; // 10 seconds
 	now.setTime(now.getTime() + EXPIRE_TIME);
-	document.cookie = "userId=" + userId +";expires=" + now.toUTCString() + ";";
-	
+	document.cookie = "userId=" + userId +";expires=" 
+		+ now.toUTCString() + ";";
     window.location='/secure';
 }
 
