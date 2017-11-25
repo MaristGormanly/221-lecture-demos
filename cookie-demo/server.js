@@ -4,7 +4,7 @@ const app = express()
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(express.static('public'))
 
-var AUTH_TIMEOUT = 5000;
+//var AUTH_TIMEOUT = 5000;
 
 /**
  * HTML views
@@ -18,6 +18,7 @@ app.get('/logout', function (req, res) {
 	res.clearCookie("userId");
 	res.sendFile('views/logout.html', {root: __dirname })
 })
+
 app.get('/secure', function (req, res) {
 	// check for the userId cookie!
 	var cookies = req.headers.cookie;

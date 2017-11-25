@@ -17,9 +17,12 @@ function getAllUsers() {
 
 function logIn(userId) {
 	// set the cookie!
-	document.cookie = "userId=" + userId;
+	var now = new Date();
+	var EXPIRE_TIME = 10000; // 10 seconds
+	now.setTime(now.getTime() + EXPIRE_TIME);
+	document.cookie = "userId=" + userId +";expires=" + now.toUTCString() + ";";
 	
-    window.location='/secure'
+    window.location='/secure';
 }
 
 getAllUsers();
