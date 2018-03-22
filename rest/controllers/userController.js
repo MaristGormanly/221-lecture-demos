@@ -21,7 +21,9 @@ users.push(user4);
 
 
 
-/*
+
+
+/* 2-1 getUsers
 
 exports.getUsers = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
@@ -30,7 +32,7 @@ exports.getUsers = function(req, res) {
 
 */
 
-/*
+/* 2-2 saveUser
 
 exports.saveUser = function(req, res) {
 	var newUser = new user(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
@@ -41,7 +43,7 @@ exports.saveUser = function(req, res) {
 
 */
 
-/*
+/* 3-1 getUser/:id
 
 exports.getUser = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
@@ -50,7 +52,7 @@ exports.getUser = function(req, res) {
 
 */
 
-/*
+/* 3-2 deleteUser/:userId
 
 exports.deleteUser = function(req, res) {
 	users.splice(req.params.userId, 1);
@@ -60,7 +62,7 @@ exports.deleteUser = function(req, res) {
 
 */
 
-/*
+/* 3-3 updateUser/:userId
 
 exports.updateUser = function(req, res) {
 	// get the existing user from the array
