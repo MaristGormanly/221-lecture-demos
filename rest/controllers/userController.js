@@ -16,10 +16,21 @@ users.push(user2);
 users.push(user3);
 users.push(user4);
 
+
+
+
+
+
+/*
+
 exports.getUsers = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
     res.send(users);
 }
+
+*/
+
+/*
 
 exports.saveUser = function(req, res) {
 	var newUser = new user(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
@@ -28,16 +39,28 @@ exports.saveUser = function(req, res) {
 	res.send(req.body);
 }
 
+*/
+
+/*
+
 exports.getUser = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
     res.send(users[req.params.userId]);
 }
+
+*/
+
+/*
 
 exports.deleteUser = function(req, res) {
 	users.splice(req.params.userId, 1);
 	res.setHeader('Content-Type', 'application/json');
 	res.send(users);
 }
+
+*/
+
+/*
 
 exports.updateUser = function(req, res) {
 	// get the existing user from the array
@@ -60,5 +83,5 @@ exports.updateUser = function(req, res) {
 	res.send(users[req.params.userId]);
 }
 
-
+*/
 
