@@ -1,6 +1,24 @@
 var changeButton = document.getElementById('changeButton');
 changeButton.addEventListener('click', loadPromise2);
 
+function loadDoc() {
+	var req = new XMLHttpRequest();
+	req.open("GET", "ajax_info.txt", false);
+	req.send(null);
+	alert(req.responseText);
+}
+
+function loadDoc2() {
+	var req = new XMLHttpRequest();
+	req.open("GET", "ajax_info.txt", true);
+	req.addEventListener("load", function () {
+		if(req.status < 400) {
+			document.getElementById('demo').innerHTML = req.responseText;
+		}
+	});
+	req.send(null);
+}
+
 function loadPromise() {
 	fetch("ajax_info.txt").then(
 		function(response) { 
@@ -24,25 +42,6 @@ function loadPromise2() {
 			alert(data);
 		}
 	);
-}
-
-
-function loadDoc() {
-	var req = new XMLHttpRequest();
-	req.open("GET", "ajax_info.txt", false);
-	req.send(null);
-	alert(req.responseText);
-}
-
-function loadDoc2() {
-	var req = new XMLHttpRequest();
-	req.open("GET", "ajax_info.txt", true);
-	req.addEventListener("load", function () {
-		if(req.status < 400) {
-			document.getElementById('demo').innerHTML = req.responseText;
-		}
-	});
-	req.send(null);
 }
 
 function myPromise(url) {
