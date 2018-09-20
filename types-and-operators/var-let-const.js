@@ -5,18 +5,18 @@ console.log("1: " + testVar);
 console.log("1: " + testNothing);
 
 function scopeTester() {
-	var testVar = "changed testVar";
+	var testVar = "changed original testVar";
+	var localTestVar = testVar + " addition";
 	testNothing = "changed testNothing";
 
 	console.log("2: " + testVar);
+	console.log("2: " + localTestVar);
 	console.log("2: " + testNothing);
 }
-
 scopeTester();
 
 console.log("3: " + testVar);
 console.log("3: " + testNothing);
-
 
 
 
