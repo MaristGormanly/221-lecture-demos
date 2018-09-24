@@ -8,18 +8,18 @@ console.log("1: " + testNothing);
 
 
 function scopeTester() {
-	var testVar = "changed testVar";
-	//testNothing = "changed testNothing";
+	var testVar = "changed original testVar";
+	var localTestVar = testVar + " addition";
+	testNothing = "changed testNothing";
 
-	//console.log("2: " + testVar);
-	//console.log("2: " + testNothing);
+	console.log("2: " + testVar);
+	console.log("2: " + localTestVar);
+	console.log("2: " + testNothing);
 }
-
 scopeTester();
 
 //console.log("3: " + testVar);gender
 //console.log("3: " + testNothing);
-
 
 
 

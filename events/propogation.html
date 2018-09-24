@@ -2,18 +2,21 @@
 <html>
 	<head></head>
 	<body>
-		<p>A paragraph with a <button>button</button>.</p>
+		<p>A paragraph with a <button>button</button>. And a <span>span</span>.</p>
 		
 		<script>
 		  var para = document.querySelector("p");
 		  var button = document.querySelector("button");
+		  var span = document.querySelector("span");
 		  para.addEventListener("mousedown", function() {
 		    console.log("Handler for paragraph.");
 		  });
 		  button.addEventListener("mousedown", function(event) {
 		    console.log("Handler for button.");
-		    if (event.which == 3)
-		      event.stopPropagation();
+		  });
+		  span.addEventListener("mousedown", function(event) {
+		    console.log("Handler for span.");
+			event.stopPropagation();
 		  });
 		</script>
 		  
