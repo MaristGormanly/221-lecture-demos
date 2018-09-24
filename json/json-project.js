@@ -82,7 +82,7 @@ function showSettings() {
         response.json().then(function(data) {  
             populateSettings(data);
             //return data;  
-			//alert(data);
+			//console.log(data);
         });
     });
 }

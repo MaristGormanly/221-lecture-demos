@@ -5,7 +5,7 @@ function loadDoc() {
 	var req = new XMLHttpRequest();
 	req.open("GET", "ajax_info.txt", false);
 	req.send(null);
-	alert(req.responseText);
+	console.log(req.responseText);
 }
 
 function loadDoc2() {
@@ -23,7 +23,7 @@ function loadPromise() {
 	fetch("ajax_info.txt").then(
 		function(response) { 
 			var text = response.text().then(function(data) {
-					alert('success! ' + data);
+					console.log('success! ' + data);
 			});
 		}, 
 		function() { 
@@ -36,10 +36,10 @@ function loadPromise2() {
 	var mp = new myPromise("/notbrian");
 	mp.then(
 		function(data) {
-			alert(data);
+			console.log(data);
 		},
 		function(data) {
-			alert(data);
+			console.log(data);
 		}
 	);
 }
