@@ -19,8 +19,11 @@ topScores.push(topScore3);
 
 window.addEventListener("load", function() {
 	var topTenList = document.getElementById('topTenList');
+	/*
 	for(el in topScores) {
 		topTenList.innerHTML += topScores[el].playerName += "<br />";
 	}
+	*/
+	topScores.forEach((score) => topTenList.innerHTML += score.playerName += "<br />")
 	
 })
