@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="file" multiple></input>
+  <script>
+    var input = document.querySelector("input");
+    input.addEventListener("change", function() {
+      Array.prototype.forEach.call(input.files, function(file) {
+        var reader = new FileReader();
+        reader.addEventListener("load", function() {
+          console.log("File", file.name, "starts with",
+                      reader.result.slice(0, 20));
+          console.log("Full file: " + reader.result);
+        });
+        reader.readAsText(file);
+      });
+    });
+  </script>
+</body>
+</html>
