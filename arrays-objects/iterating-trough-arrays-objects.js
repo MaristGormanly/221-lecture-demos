@@ -1,17 +1,21 @@
-var myArr = ['tom', 'sue', 'sally'];
+var myArr = ['tom', 'sue', , 3, 'sally'];
 
 console.log("Array with normal for ------------------------")
-for(var i=0; i<myArr.length; i++) {
+for(var i=0; i<myArr.length; i+',+) {
   console.log(myArr[i]);
 }
+
+
 console.log("Array with for-in ------------------------")
 for(var el in myArr) {
   console.log(myArr[el]);
 }
+
+
 console.log("Array with foreach ------------------------")
 myArr.forEach((x) => console.log(x));
 
-
+/*
 var myObj = {firstName: 'Brian', lastName: 'Gormanly'};
 
 console.log("Object with for-in ------------------------")
@@ -25,10 +29,13 @@ As of JavaScript 1.8.5 you can use Object.keys(obj) to get an Array of
 properties defined on the object itself (the ones that return true for
 obj.hasOwnProperty(key)).
 */
+
+
+/*
 Object.keys(myObj).forEach((x) => console.log(x));
 Object.keys(myObj).forEach((x, i) => console.log("index " + i + " value: " + x));
 
-
+*/
 
 
 /* errata

@@ -1,29 +1,26 @@
-function topScore(inName, inScore, inDate) {
-	/*
-		This object forces the type, we are 
-		guaranteed to have date type for the dateEarned
-		and integers for the player score
-	*/
-	this.playerName = inName;
-	this.playerScore = parseInt(inScore);
-	this.dateEarned = new Date(inDate);
+function topScore(name, score, date) {
+	this.playerName = name;
+	this.playerScore = score;
+	this.playerDate = date;
 }
 
+var topScore1 = new topScore('brian', 2, '2018/09/27');
+var topScore2 = new topScore('Sally', 20, '2018/09/27');
+var topScore3 = {playerName: "Charlie", playerScore: 10, playerDate: '2018/09/27'}
+
 var topScores = [];
-var topScore1 = new topScore('Brian', 2, '2018/09/27');
-var topScore2 = new topScore('Charlse', 39, '2018/09/27');
-var topScore3 = {playerName: 'Harry', playerScore: 4, dateEarned: '2018/09/26'};
 topScores.push(topScore1);
 topScores.push(topScore2);
 topScores.push(topScore3);
 
-window.addEventListener("load", function() {
-	var topTenList = document.getElementById('topTenList');
+//console.log(topScores);
+window.addEventListener('load', function() {
+	var theList = document.getElementById('topTenList');
 	/*
 	for(el in topScores) {
-		topTenList.innerHTML += topScores[el].playerName += "<br />";
-	}
-	*/
-	topScores.forEach((score) => topTenList.innerHTML += score.playerName += "<br />")
-	
-})
+		//console.log(topScores[el].playe;rName);
+		theList.innerHTML += "Player Name: " + topScores[el].playerName + "<br />";
+	}*/
+	theList.innerHTML = "";
+	topScores.forEach((anything) => theList.innerHTML += "Player Name: " + anything.playerName + "<br />");
+});
