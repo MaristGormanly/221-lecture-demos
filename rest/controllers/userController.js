@@ -25,7 +25,7 @@ exports.saveUser = function(req, res) {
 
 exports.getUser = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
-    res.send(users[req.params.userId]);
+  res.send(users[req.params.userId]);
 }
 
 exports.deleteUser = function(req, res) {
@@ -39,7 +39,9 @@ exports.updateUser = function(req, res) {
 	var updatedUser = users[req.params.userId];
 
 	// check to see what has been passed and update the local copy
+	console.log(req.body.firstName);
 	if(req.body.firstName)
+
 		updatedUser.firstName = req.body.firstName;
 	if(req.body.lastName)
 		updatedUser.lastName = req.body.lastName;
