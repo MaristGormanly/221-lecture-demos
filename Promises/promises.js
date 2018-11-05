@@ -1,4 +1,4 @@
-/*
+
 function myFunction(price) {
 	return new Promise(function(resolve, reject) {
 		if(price > 2) reject("This failed!");
@@ -15,10 +15,10 @@ myFunction(1)
 }).catch(function(error) {
 	console.log(error);
 })
-*/
 
 
 
+/*
 // static Promise
 function createPrice(price, delay) {
 	return new Promise(function(resolve, reject) {
@@ -31,6 +31,7 @@ function createPrice(price, delay) {
 }
 
 //createPrice(5, 1000).then(function(rPrice) {console.log(rPrice)});
+*/
 
 // without chaining, has nested resolve and reject handling
 /*
@@ -41,6 +42,7 @@ Promise.all(promises).then(function(resolvedPromises) {
 */
 
 // now with chaining (resolve and reject handled at the bottom of the chain)
+/*
 var promises = [createPrice(3, 1100), createPrice(105, 1300)];
 
 Promise.all(promises).then(function(resolvedPromises) {
@@ -48,3 +50,4 @@ Promise.all(promises).then(function(resolvedPromises) {
 }).catch(function(error) {
 	console.log(error);
 })
+*/
