@@ -16,14 +16,15 @@ app.get('/', function (req, res) {
 app.get('/logout', function (req, res) {
 	// remove our cookie
 	res.clearCookie("userId");
-	res.sendFile('views/logout.html', {root: __dirname })
+	res.sendFile('views/
+	.html', {root: __dirname })
 })
 
 app.get('/secure', function (req, res) {
 	// check for the userId cookie!
 	var cookies = req.headers.cookie;
 	var flag = false;
-    if(cookies) { 
+    if(cookies) {
 		cookies.split(';').forEach(function(cookie) {
         	var parts = cookie.split('=');
 			cookieName = parts[0].trim();
@@ -69,5 +70,5 @@ app.listen(1337, function () {
  * helper functions
  */
 function getUserIdCookie(cookies) {
-    
+
 }
