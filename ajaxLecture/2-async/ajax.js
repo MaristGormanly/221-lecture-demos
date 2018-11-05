@@ -19,6 +19,7 @@ function loadDoc2() {
 	req.open("GET", "ajax_info.txt", true);
 	req.addEventListener("load", function () {
 		if(req.status < 400) {
+			console.log(req.responseText);
 			updateDiv(req.responseText);
 		}
 	});

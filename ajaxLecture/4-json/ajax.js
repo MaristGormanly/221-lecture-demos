@@ -4,7 +4,6 @@ changeButton.addEventListener('click', loadDoc);
 
 
 
-
 function loadDoc() {
 	var req = new XMLHttpRequest();
 	req.open("GET", "ajax_info.json", true);
