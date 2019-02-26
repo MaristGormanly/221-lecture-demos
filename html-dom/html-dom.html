@@ -1,11 +1,22 @@
 <html>
   <head>
   </head>
+
+  <!--<body onload="badFunction()">-->
   <body>
     <p id="demo">This is text</p>
+    <script>
+      document.getElementById('demo').innerHTML = 'Hello World!'
+      //window.onload = function() {document.getElementById('demo').innerHTML = 'Hello World!'};
+      //window.onload = () => document.getElementById('demo').innerHTML = 'Hello World!';
+      /*
+      function badFunction() {
+        document.getElementById('demo').innerHTML = 'Hello World!';
+      }
+      */
+    </script>
+    <!--<p id="demo">This is text</p> -->
   </body>
 
-  <script>
-    document.getElementById('demo').innerHTML = 'Hello World!';
-  </script>
+
 </html>
