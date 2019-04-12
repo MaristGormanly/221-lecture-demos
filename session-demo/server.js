@@ -16,8 +16,7 @@ app.get('/', function (req, res) {
 app.get('/logout', function (req, res) {
 	// remove our cookie
 	res.clearCookie("userId");
-	res.sendFile('views/
-	.html', {root: __dirname })
+	res.sendFile('views/logout.html', {root: __dirname })
 })
 
 app.get('/secure', function (req, res) {

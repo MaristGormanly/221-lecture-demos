@@ -48,14 +48,14 @@ function populateSettings(settings) {
 //  /game/getSettings route in oregonTrail.js. (create on board with class)
 
 app.get('/game/getSettings', function(req, res) {
-  
+
   // return as json
   res.setHeader('Content-Type', 'application/json');
   res.send(game.gameSettings);
 
 })
 
-// remembering that game.gameSettings is: 
+// remembering that game.gameSettings is:
 exports.gameSettings = new gameData();
 function gameData() {
         this.playerNames = [];
@@ -79,9 +79,9 @@ function showSettings() {
             console.log('problem with ajax call! ' + response.status + " msg: " + response.value);
             return;
         }
-        response.json().then(function(data) {  
+        response.json().then(function(data) {
             populateSettings(data);
-            //return data;  
+            //return data;
 			//console.log(data);
         });
     });
