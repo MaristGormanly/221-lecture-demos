@@ -13,14 +13,14 @@ users.push(user4);
 
 exports.getUsers = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
-    res.send(users);
+	res.send(users);
 }
 
 exports.saveUser = function(req, res) {
 	var newUser = user.createUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
 	users.push(newUser);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(req.body);
+	res.send(users);
 }
 
 exports.getUser = function(req, res) {
