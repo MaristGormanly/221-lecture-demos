@@ -14,10 +14,12 @@ function loadDoc() {
 		}
 	});
 
+
 	req.addEventListener("progress", function () {
 			alert("Progress!");
 	});
 	req.send(null);
+	
 }
 
 function updateDiv(content) {

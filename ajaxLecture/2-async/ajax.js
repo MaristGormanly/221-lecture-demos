@@ -5,7 +5,7 @@ changeButton.addEventListener('click', loadDoc);
 // version 1
 function loadDoc() {
 	var req = new XMLHttpRequest();
-	req.open("GET", "ajax_info.txt", true);
+	req.open("GET", "ajax_info.txt", false);
 	req.send(null);
 	console.log(req.responseText);
 	updateDiv(req.responseText);

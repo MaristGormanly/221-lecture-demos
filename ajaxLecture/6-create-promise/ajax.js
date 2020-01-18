@@ -1,20 +1,25 @@
 var changeButton = document.getElementById('changeButton');
 changeButton.addEventListener('click', loadPromise);
 
-function myPromise(url) {
+function myRandomPromise(message) {
 	return new Promise(function(succeed, fail) {
-		if(url == "/brian") {
-			var content = "delivered as a promise! " + url;
+		var randomNumber = Math.floor(Math.random() * 10);
+		if(randomNumber > 3) {
+			var content = "<h1>Success!</h1>"
+				+"<h3>Random Number: " + randomNumber +" </h3><p>Your message was: " + message
+				+ "</p><p>It was delivered because " + randomNumber + " > 3</p>";
 			succeed(content);
 		}
 		else {
-			fail("so sorry! This failed!")
+			var content = "<h1>Fail!</h1><p>Your message was: " + message
+				+ "</p><p>It was not delivered because " + randomNumber + " <= 3</p>";
+			fail(content)
 		}
 	});
 }
 
 function loadPromise() {
-	var mp = new myPromise("/notbrian");
+	var mp = new myRandomPromise("Hello Promise!");
 	mp.then(
 		function(data) {
 			console.log(data);
