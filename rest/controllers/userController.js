@@ -17,7 +17,7 @@ exports.getUsers = function(req, res) {
 }
 
 exports.saveUser = function(req, res) {
-	var newUser = user.createUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
+	let newUser = user.createUser(req.body.firstName, req.body.lastName, req.body.email, req.body.password);
 	users.push(newUser);
 	res.setHeader('Content-Type', 'application/json');
 	res.send(users);

@@ -1,4 +1,4 @@
-function user(id, first, last, email, password) {
+function User(id, first, last, email, password) {
 	this.id = id;
 	this.firstName = first;
 	this.lastName = last;
@@ -11,11 +11,11 @@ function userSession() {
 	this.clickCount = 0;
 	this.lastRequestTime = new Date.now();
 }
-var sessions = [];
+let sessions = [];
 
 exports.checkSession = function(sessionId) {
 	if(sessions.length > 0) {
-		for(i in sessions) {
+		for(let i in sessions) {
 			if(sessions[i].uuid == sessionId) {
 				return session[i];
 			}
@@ -24,12 +24,12 @@ exports.checkSession = function(sessionId) {
 	return null;
 }
 
-var users = [];
+let users = [];
 
-var user1 = new user(0, "Brian", "Gormanly", "brian.gormanly@marist.edu", "letmein");
-var user2 = new user(1, "Happy", "Gilmore", "happy.gilmore@gmail.com", "backnine");
-var user3 = new user(2, "Harry", "Truman", "htruman@wh.gov", "pres1");
-var user4 = new user(3, "George", "Washinton", "gw@wh.gov", "pres2");
+let user1 = new User(0, "Brian", "Gormanly", "brian.gormanly@marist.edu", "letmein");
+let user2 = new User(1, "Happy", "Gilmore", "happy.gilmore@gmail.com", "backnine");
+let user3 = new User(2, "Harry", "Truman", "htruman@wh.gov", "pres1");
+let user4 = new User(3, "George", "Washinton", "gw@wh.gov", "pres2");
 users.push(user1);
 users.push(user2);
 users.push(user3);
@@ -37,11 +37,11 @@ users.push(user4);
 
 exports.getUsers = function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
-    res.send(users);
+	res.send(users);
 }
 
 exports.saveUser = function(req, res) {
-	var newUser = new user(users.length, req.body.firstName, req.body.lastName, req.body.email, req.body.password);
+	let newUser = new User(users.length, req.body.firstName, req.body.lastName, req.body.email, req.body.password);
 	users.push(newUser);
 	res.setHeader('Content-Type', 'application/json');
 	res.send(req.body);
@@ -60,7 +60,7 @@ exports.deleteUser = function(req, res) {
 
 exports.updateUser = function(req, res) {
 	// get the existing user from the array
-	var updatedUser = users[req.params.userId];
+	let updatedUser = users[req.params.userId];
 
 	// check to see what has been passed and update the local copy
 	if(req.body.firstName)
