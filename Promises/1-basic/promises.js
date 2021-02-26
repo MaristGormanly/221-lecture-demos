@@ -1,3 +1,5 @@
+
+
 function createPrice(price, delay) {
 	return new Promise(function(resolve, reject) {
 		if(price > 100) reject("This failed!");
@@ -8,6 +10,9 @@ function createPrice(price, delay) {
 	});
 }
 
+createPrice(55, 1000).then((rPrice) => alert(rPrice));
+
+
 // version 1 only success handled
 //createPrice(500, 1000).then((rPrice) => alert(rPrice));
 
@@ -15,13 +20,13 @@ function createPrice(price, delay) {
 //createPrice(500, 1000).then((rPrice) => alert(rPrice), (message) => alert(message));
 
 // version 3: Promise.all :: Will wait for all to return! (longest timeout or first failure)
-/*
+
 var promises = [createPrice(300, 500).then((resolvedPrice) => resolvedPrice), createPrice(5, 3000).then((resolvedPrice) => resolvedPrice)];
 
 Promise.all(promises).then(function(resolvedPromises) {
 	alert(resolvedPromises);
 })
-*/
+
 
 
 // version 4: Promise.all with chaining (using the same success and failure functions for all)
@@ -33,4 +38,5 @@ Promise.all(promises).then(function(resolvedPromises) {
 }).catch(function(error) {
 	alert(error);
 })
+
 */
